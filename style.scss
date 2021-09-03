@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+
+
+.navbar-parent {
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    * {
+        font-size: 22px;
+        padding: 20px;
+        text-decoration: none;
+        background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(255,6,6,1) 0%, rgba(255,171,0,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    
+}
+
+.hero-text {
+    background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(255,6,6,1) 0%, rgba(255,171,0,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    padding: 20px;
+    text-align: center;
+
+    
+
+    * {
+        animation: moveUp;
+        padding: 5px;
+    }
+
+    h1 { 
+        font-size: 80px;
+        
+    }
+
+    p {
+        font-size: 40px;
+    }
+}
+
+
+.skill-text {
+    background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(255,6,6,1) 0%, rgba(255,171,0,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 40px;
+}
+
+.skills { 
+    transform: scale(.80);
+    display: grid;
+    height: 55vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 2em;
+}
+
+.skill { 
+    transition: all 0.5s ease-in;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    &:hover {
+        transform: scale(1.25);
+    }
+       
+
+    i {
+        transform: scale(7);
+    }
+    
+}
+
+@media screen and(max-width: 700px) {
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero { 
+        height: 50vh;
+
+    }
+}
+
+@media screen and(max-width: 480px) {
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 40vh;
+        span {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero-text {
+        h1 {
+            font-size: 60px;
+        }
+    }
+}
+
+
+@keyframes moveUp {
+    from {
+        opacity: 0;
+        
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
